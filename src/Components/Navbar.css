@@ -1,0 +1,109 @@
+
+.navbar { height: 70px;
+   position: fixed;
+    top: 0;
+     width: 100%; 
+    top: 0; 
+    width: 100%; 
+    background: rgba(40, 78, 78, 0.485);
+    
+      backdrop-filter: blur(1100px); /* the blur */
+       -webkit-backdrop-filter: blur(100vh); /* for Safari */ 
+       border-bottom: 1px solid rgba(145, 6, 6, 0.3);
+        color: white; display: 
+        flex; margin: 20px 0 ;
+         position-try-fallbacks: inherit; 
+         justify-content: space-between;
+          align-items: center;
+           padding: 15px 25px;
+       z-index: 1000; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+.logo {
+  font-size: 1.8rem;
+  font-weight:bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  color: #ffffff;
+}
+
+/* ----- Nav Links (Desktop) ----- */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c4671c;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+background: rgba(23, 118, 125, 0.485);
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    text-align: right;
+    padding: 20px;
+    gap: 15px;
+    border-left: 2px solid #00bcd4;
+  }
+
+ 
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* ----- Navbar Active State ----- */
+.navbar.active {            
+  background-color: #000;
+}   
+/* ----- Navbar Transition ----- */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.resume-section h2,
+.resume-section p {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }

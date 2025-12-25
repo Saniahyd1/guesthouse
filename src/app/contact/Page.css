@@ -1,0 +1,87 @@
+h1 { 
+    font-size: clamp(24px, 5vw, 40px);
+    text-align: center;
+    margin: 1.5ch;
+    text-shadow: 1.5 1 rgb(76, 133, 159);
+    
+}
+.Contact{
+    font-size: clamp(16px, 3vw, 24px);
+    text-align: center;
+    margin: 1.5ch;
+    text-shadow: 1.5 1 rgb(150, 150, 150);
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  
+  font-size: clamp(14px, 2.5vw, 20px);
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+.ReveiwSection{
+  border: 5px solid rgba(24, 126, 133, 0.485);
+  border-radius: 60px;
+  padding: 25px;
+ 
+    margin: 20px;
+}
+.contact-section {
+  padding: 40px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: #444 2px solid;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+@media (max-width: 600px) {
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card img {
+    width: 40px;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+}

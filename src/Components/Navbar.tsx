@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className={`nav-links ${open ? "open" : ""}`}>
         <Link href="/">Home</Link>
 
-        <Link href="/booking">Booking</Link>
+        <Link href="/booking">Book Now</Link>
         <Link href="/gallery">Gallery</Link>
         <Link href="/contact">Contact</Link>
       </div>

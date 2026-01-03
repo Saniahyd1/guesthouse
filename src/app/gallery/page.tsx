@@ -31,6 +31,7 @@ export default function GalleryPage() {
   return (
     <>
      <Navbar />
+     
      <main>
       <i><b><h1>Gallery</h1></b></i>
       <div className="columns-1 sm:columns-2 md:columns-2 gap-4 p-4">

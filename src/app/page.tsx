@@ -2,6 +2,7 @@
 import Navbar from "@/Components/Navbar";
 import CircularGallery from "@/Components/CircularGallery";
 import Footer from "@/Components/footer";
+import Link from "next/link";
 import "./page.css";
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
     <Navbar />
       <main className="main">
       <div className="home-bg">
-      <h1><b>Welcome to <br />Hill Street Service Apartment</b></h1>
+      <h1><b>Welcome to <br />Hill Street Service Apartment</b><br /><Link href="/gallery" className="gallery-btn">Explore Gallery</Link></h1>
      
      </div>
+     
       <div className="features">
      <h2><b>Stay Highlights</b></h2> 
       <CircularGallery/>

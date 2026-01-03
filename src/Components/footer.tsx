@@ -11,8 +11,8 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Location</h3>
             <p>
-              Hill Street Service Apartment, Lane opposite TV9,,<br />
-              Road No. 3, Venkateshwara Nagar, Aurora Colony,<br />
+              Hill Street Service Apartment, <br />Lane opposite TV9,<br/>
+              Road No. 3, Venkateshwara Nagar,<br/> Aurora Colony,<br />
               Banjara Hills, Hyderabad, Telangana 500034, INDIA
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function Footer() {
             <h3>Contact Us</h3>
             <p className="contact">
               Email: wellness.gardenia@gmail.com<br />
-              Phone: 9985969666 / 040-31727920
+              Phone: <a href="tel:9985969666">9985969666</a> / <a href="tel:040-31727920">040-31727920</a>
             </p>
           </div>
 

@@ -74,9 +74,9 @@ h2{    font-size: clamp(24px, 5vw, 40px);
   width: 250px;
   height: auto; /* Let height grow with content */
   padding: 20px;
-  background-color: rgba(24, 126, 133, 0.485);
+  background-color: rgba(24, 186, 133, 0.385);
   border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0.2);
   text-align: center;
   
   display: flex;
@@ -127,5 +127,16 @@ iframe {
   margin-bottom: 40px;
 }
 }
-
+.gallery-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #187e85;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+}
 

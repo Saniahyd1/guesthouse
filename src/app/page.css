@@ -46,6 +46,7 @@ h2{    font-size: clamp(24px, 5vw, 40px);
     margin-top:40%;
     margin-left:10%;
   }
+
 }
 .about-us {
   margin: 30px auto;
@@ -110,6 +111,21 @@ iframe {
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px){
+ .location {
+  margin: auto;
+  
 
+}
+iframe {
+  width: 80%;
+  height: 500px;
+  border-radius: 25px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+}
 
 

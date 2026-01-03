@@ -10,7 +10,7 @@ export default function Home() {
     <Navbar />
       <main className="main">
       <div className="home-bg">
-      <h1><b>Welcome to Hill Street Service Apartment</b></h1>
+      <h1><b>Welcome to <br />Hill Street Service Apartment</b></h1>
      
      </div>
       <div className="features">

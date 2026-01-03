@@ -11,8 +11,8 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Location</h3>
             <p>
-              Hill Street Service Apartment Near Gvk One Mall,<br />
-              54, Venkateshwara Nagar, Aurora Colony,<br />
+              Hill Street Service Apartment, Lane opposite TV9,,<br />
+              Road No. 3, Venkateshwara Nagar, Aurora Colony,<br />
               Banjara Hills, Hyderabad, Telangana 500034, INDIA
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function Footer() {
             <h3>Contact Us</h3>
             <p className="contact">
               Email: wellness.gardenia@gmail.com<br />
-              Phone: 9985969666
+              Phone: 9985969666 / 040-31727920
             </p>
           </div>
 
@@ -29,14 +29,17 @@ export default function Footer() {
             <h3>About</h3>
             <p className="about">Hill Street Service Apartment</p>
             <p>
-              A guest house designed to make every guest feel at home with comfort and care.
+              A service apartment designed to make every guest feel at home, with comfort and care.
             </p>
           </div>
 
         </div>
-
-        <p className="footer-bottom">© 2026 Hill Street — All Rights Reserved</p>
+     <p className="footer-bottom">
+  © 2026 Hill Street — All Rights Reserved<br />
+  Created and managed by Sania Sultana | Contact:{" "}
+  <a href="tel:+919515120036">+919515120036</a>
+</p>
       </div>
-    </footer>
-  );
+      </footer>
+);
 }

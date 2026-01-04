@@ -5,7 +5,7 @@
      width: 100%; 
     top: 0; 
     width: 100%; 
-    background: rgba(40, 78, 78, 0.485);
+    background: rgba(40, 78, 78, 0.785);
     
       backdrop-filter: blur(1100px); /* the blur */
        -webkit-backdrop-filter: blur(100vh); /* for Safari */ 

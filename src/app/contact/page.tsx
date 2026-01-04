@@ -42,7 +42,7 @@ const copyToClipboard = (text: string) => {
               style={{ cursor: "pointer" }}
             >
               <img src="phone-call.png" alt="Phone" />
-              <p>9985969666<br/>9848495689</p>
+              <p>9985969666<br/></p>
             </div>
 
             <div

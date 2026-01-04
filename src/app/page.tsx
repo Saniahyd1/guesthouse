@@ -16,7 +16,7 @@ export default function Home() {
      </div>
      
       <div className="features">
-     <h2><b>Stay Highlights</b></h2> 
+     <h2><b>What’s Nearby</b></h2> 
       <CircularGallery/>
      
     
@@ -37,7 +37,7 @@ export default function Home() {
   
           
           <div className="location" style={{alignItems: 'center'}}>
-        <h2><b>Our Location</b></h2>
+        <h2><b>Location</b></h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.684029368478!2d78.43316787462786!3d17.42694480166536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90d3112cf9f9%3A0x64c41d8971f0705a!2sOYO%20Flagship%20Hill%20Street%20Service%20Apartment%20Near%20Gvk%20One%20Mall!5e0!3m2!1sen!2sin!4v1763824757499!5m2!1sen!2sin"
             width="600"
            height="450"

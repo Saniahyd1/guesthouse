@@ -3,43 +3,49 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="footer">
+    <footer className="footer">
+      <div className="footer-container">
 
-        <div className="footer-container">
-          
-          <div className="footer-section">
-            <h3>Location</h3>
-            <p>
-              Hill Street Service Apartment, <br />Lane opposite TV9,<br/>
-              Road No. 3, Venkateshwara Nagar,<br/> Aurora Colony,<br />
-              Banjara Hills, Hyderabad, Telangana 500034, INDIA
-            </p>
-          </div>
-
-          <div className="footer-section">
-            <h3>Contact Us</h3>
-            <p className="contact">
-              Email: wellness.gardenia@gmail.com<br />
-              Phone: <a href="tel:9985969666">9985969666</a> / <a href="tel:040-31727920">040-31727920</a>
-            </p>
-          </div>
-
-          <div className="footer-section">
-            <h3>About</h3>
-            <p className="about">Hill Street Service Apartment</p>
-            <p>
-              A service apartment designed to make every guest feel at home, with comfort and care.
-            </p>
-          </div>
-
+        {/* Address Card */}
+        <div className="footer-card">
+          <h3>Address</h3>
+          <p>
+            <b>Hill Street Service Apartment</b><br />
+            Lane Opposite TV9,<br />
+            Road No. 3, Venkateshwara Nagar,<br />
+            Aurora Colony,Banjara Hills,<br />
+            Hyderabad, Telangana – 500034, <br />INDIA
+          </p>
         </div>
-     <p className="footer-bottom">
-  © 2026 Hill Street — All Rights Reserved<br />
-  Created and managed by Sania Sultana | Contact:{" "}
-  <a href="tel:+919515120036">+919515120036</a>
-</p>
+
+        {/* Contact Card */}
+        <div className="footer-card">
+          <h3>Contact Us</h3>
+          <p>
+            Phone:<br />
+            <a href="tel:+919985969666">+91 99859 69666</a><br />
+            <a href="tel:04031727920">040-31727920</a><br /><br />
+            Email: wellness.gardenia@gmail.com<br /><br />
+            
+          </p>
+        </div>
+
+        {/* About Card */}
+        <div className="footer-card">
+          <h3>About Us</h3>
+          <p>
+            Hill Street Service Apartment is designed to make every guest
+            feel at home, offering comfort, convenience, and care.
+          </p>
+        </div>
+
       </div>
-      </footer>
-);
+
+      <p className="footer-bottom">
+        © 2026 Hill Street — All Rights Reserved<br />
+        Created and managed by Sania Sultana | Contact:
+        <a href="tel:+919515120036"> +91 95151 20036</a>
+      </p>
+    </footer>
+  );
 }

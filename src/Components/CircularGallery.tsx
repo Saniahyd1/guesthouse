@@ -41,13 +41,23 @@ const cards = [
   },
   {
     image: "/airport.jpg",
-    title: "Begumpet Airport",
-    description: "Approximately 5.8 km from Hill Street Service Apartment.",
+    title: "Begumpet Railway Station",
+    description: "Approximately 4.6 km from Hill Street Service Apartment.",
   },
   {
     image: "/habitat.jpg",
     title: "Habitat Cafe",
     description: "Approximately 2.3 km from Hill Street Service Apartment.",
+  },
+    {
+    image: "/metro.jpg",
+    title: "Metro station road number 5 Jubilee hills",
+    description: "Approximately 1.6 km from Hill Street Service Apartment.",
+  },
+     {
+    image: "/punjagutta.jpg",
+    title: "Metro Station Punjagutta",
+    description: "Approximately 2.1 km from Hill Street Service Apartment.",
   },
 ];
 

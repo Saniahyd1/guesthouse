@@ -26,7 +26,7 @@ export default function Home() {
         <p>
          Hill Street Service Apartment is a premium stay option located in Banjara Hills — the heart of Hyderabad. Designed for comfort and convenience, our property offers a peaceful, homely, and secure environment for guests seeking both short and long stays.
 
-          We provide fully furnished, spacious, and well-maintained rooms equipped with modern amenities to ensure a relaxed and enjoyable experience. Whether you are a business traveler, a family on vacation, or someone visiting the city for medical or long-term purposes, we offer an ideal blend of homelike warmth and hotel-style service.
+          We provide fully furnished, spacious, and well-maintained premium and executive rooms equipped with modern amenities to ensure a relaxed and enjoyable experience. Whether you are a business traveler, a family on vacation, or someone visiting the city for medical or long-term purposes, we offer an ideal blend of homelike warmth and hotel-style service.
 
           Our strategic location in Banjara Hills gives guests seamless access to major malls, restaurants, hospitals, and business hubs, making your stay both convenient and memorable. With clean rooms, responsive support, and a calm atmosphere, we focus on delivering comfort, privacy, and a hassle-free experience from check-in to checkout.
 

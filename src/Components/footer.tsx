@@ -43,8 +43,8 @@ export default function Footer() {
 
       <p className="footer-bottom">
         © 2026 Hill Street — All Rights Reserved<br />
-        Created and managed by <a href="https://portfolio-lake-tau-50.vercel.app/">Sania Sultana</a> | 
-        <a href="mailto:saniahyd1@gmail.com"> saniahyd1@gmail.com</a>
+        Designed, developed, and managed by <a href="https://portfolio-lake-tau-50.vercel.app/">Sania Sultana</a> | 
+        <a href="mailto:saniahyd1@gmail.com"> Saniahyd1@gmail.com</a>
       </p>
     </footer>
   );

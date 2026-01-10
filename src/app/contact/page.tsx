@@ -42,7 +42,8 @@ const copyToClipboard = (text: string) => {
               style={{ cursor: "pointer" }}
             >
               <img src="phone-call.png" alt="Phone" />
-              <p>9985969666<br/></p>
+              <p><a href="tel:04031727920">040-31727920</a><br/>
+              </p>
             </div>
 
             <div
@@ -51,7 +52,7 @@ const copyToClipboard = (text: string) => {
               style={{ cursor: "pointer" }}
             >
               <img src="whatsapp.png" alt="WhatsApp" />
-              <p>9985969666</p>
+              <p><a href="tel:9985969666">+919985969666</a></p>
             </div>
 
             <div
@@ -81,10 +82,11 @@ const copyToClipboard = (text: string) => {
         </div>
 
         <div className="ReveiwSection">
-          <h1>What Our Customers Say</h1>
+          
           <div
             className="elfsight-app-db8148c4-d196-463c-be34-ffea461e3f77"
             data-elfsight-app-lazy
+             
           ></div>
         </div>
       </main>

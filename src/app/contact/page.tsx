@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/footer";
-import "./page.css";
+import "./Page.css";
 
 export default function ContactPage() {
   const [copiedText, setCopiedText] = useState("");

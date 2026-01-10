@@ -33,7 +33,7 @@ export default function GalleryPage() {
      <Navbar />
      
      <main>
-      <i><b><h1>Gallery</h1></b></i>
+      <i><b><h1 margin-top="1.5ch">Gallery</h1></b></i>
       <div className="columns-1 sm:columns-2 md:columns-2 gap-4 p-4">
         
         {images.map((img, idx) => (

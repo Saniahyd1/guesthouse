@@ -2,7 +2,7 @@ h1 {
     font-size: clamp(24px, 5vw, 40px);
     text-align: center;
     margin: 1.5ch;
-    text-shadow: 1.5 1 rgb(76, 133, 159);
+    text-shadow: 1.5 1 rgb(57, 101, 121);
     
 }
 .Contact{
@@ -22,10 +22,10 @@ main {
   font-weight: 500;
 }
 .ReveiwSection{
-  border: 5px solid rgba(24, 126, 133, 0.485);
+  
   border-radius: 60px;
-  padding: 25px;
- 
+  padding: 20px;
+  
     margin: 20px;
 }
 .contact-section {
@@ -43,7 +43,7 @@ main {
 .card {
   width: 280px;
   height: 140px;
-  background: #ffffff;
+  
   border-radius: 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   display: flex;
@@ -51,13 +51,13 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: #444 2px solid;
+  border:  2px solid;
   transition: 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 35px rgba(235, 224, 224, 0.15);
 }
 
 .card img {
@@ -68,7 +68,7 @@ main {
 .card p {
   font-size: 18px;
   font-weight: 600;
-  color: #444;
+  
 }
 @media (max-width: 600px) {
   .card {
@@ -79,6 +79,10 @@ main {
   .card img {
     width: 40px;
     margin-bottom: 8px;
+  }
+  .ReveiwSection{
+    padding: 10px;
+    margin: 10px;
   }
 
   .card p {

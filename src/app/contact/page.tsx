@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/footer";
-import "./Page.css";
+import "./page.css";
 
 export default function ContactPage() {
   const [copiedText, setCopiedText] = useState("");
@@ -19,7 +19,7 @@ const copyToClipboard = (text: string) => {
   navigator.clipboard.writeText(text);
   setCopiedText(text);
 
-  // Clear message after 2 seconds
+  
   setTimeout(() => setCopiedText(""), 2000);
 };
 
@@ -81,6 +81,7 @@ const copyToClipboard = (text: string) => {
         </div>
 
         <div className="ReveiwSection">
+          <h1>What Our Customers Say</h1>
           <div
             className="elfsight-app-db8148c4-d196-463c-be34-ffea461e3f77"
             data-elfsight-app-lazy

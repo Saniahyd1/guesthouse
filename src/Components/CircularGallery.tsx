@@ -17,7 +17,7 @@ const cards = [
   {
     image: "/LVprasad.jpg",
     title: "LV Prasad Eye Institute",
-    description: "Approximately 2.3 km from Hill Street Service Apartment.",
+    description: "Approximately 1.3 km from Hill Street Service Apartment.",
   },
   {
     image: "/AIG.jpg",

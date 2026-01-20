@@ -113,7 +113,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <select name="roomType"  value={formData.roomType} onChange={handleChange} required>
             <option value=" " disabled selected>--Select Room Type--</option>
             <option value="single">Premium</option>
-            <option value="double">Deluxe</option>
+            
             <option value="suite">Executive</option>
           </select>
           <br /><br />

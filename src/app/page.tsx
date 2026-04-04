@@ -11,7 +11,7 @@ export default function Home() {
     <Navbar />
       <main className="main">
       <div className="home-bg">
-      <h1><b>Welcome to <br />Hill Street Service Apartment</b><br /><Link href="/gallery" className="gallery-btn">Explore Gallery</Link></h1>
+      <h1><b>Welcome to <br />Hill Street Service Apartments</b><br /><Link href="/gallery" className="gallery-btn">Explore Gallery</Link></h1>
      
      </div>
      

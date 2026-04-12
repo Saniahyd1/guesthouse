@@ -43,13 +43,13 @@ export default function ChatBot() {
   return (
     <>
       <button onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-800 text-white flex items-center justify-center shadow-lg z-50 text-2xl">
+        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-black text-white flex items-center justify-center shadow-lg z-50 text-2xl">
         {open ? '✕' : '💬'}
       </button>
 
       {open && (
         <div className="fixed bottom-24 right-6 w-80 h-125 bg-white rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-100">
-          <div className="bg-green-800 text-white p-4 rounded-t-2xl flex items-center gap-3">
+          <div className="bg-green-900 text-white p-4 rounded-t-2xl flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">🏡</div>
             <div>
               <p className="font-medium text-sm">Hill Street Assistant</p>
@@ -98,7 +98,7 @@ export default function ChatBot() {
               ➤
             </button>
           </div>
-          <p className="text-center text-xs text-gray-400 py-1 bg-white rounded-b-2xl">Powered by Claude AI</p>
+          <p className="text-center text-xs text-gray-400 py-1 bg-white rounded-b-2xl">Sania Sultana</p>
         </div>
       )}
     </>

@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">Hill Street Service Apartment</div>
+      <div className="logo">Hill Street Service Apartments</div>
 
       <div className={`nav-links ${open ? "open" : ""}`}>
         <Link href="/">Home</Link>

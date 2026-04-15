@@ -23,7 +23,7 @@ export default function Footer() {
           <h3>Contact Us</h3>
           <p>
             Phone:<br />
-            <a href="tel:+919985969666">+91 99859 69666</a><br />
+            <a href="tel:+919985969666">+91 9985969666</a><br />
             <a href="tel:04031727920">040-31727920</a><br /><br />
             Email: wellness.gardenia@gmail.com<br /><br />
             

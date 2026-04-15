@@ -34,7 +34,7 @@
 .footer-card h3 {
   font-size: 22px;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 5px #ffbebe;
+  text-shadow: 1px 1px 5px #f9c8c8;
 }
 
 .footer-card p {
@@ -44,7 +44,7 @@
 }
 
 .footer-card a {
-  color: #ffbebe;
+  color: #efe499;
   text-decoration: none;
 }
 

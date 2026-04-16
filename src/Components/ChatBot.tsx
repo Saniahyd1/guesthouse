@@ -43,7 +43,7 @@ export default function ChatBot() {
   return (
     <>
       <button onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-black text-white flex items-center justify-center shadow-lg z-50 text-2xl">
+        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-800 text-white flex items-center justify-center shadow-lg z-50 text-2xl">
         {open ? '✕' : '💬'}
       </button>
 

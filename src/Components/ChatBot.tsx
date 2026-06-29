@@ -1,106 +1,160 @@
-'use client';
-import { useState, useRef, useEffect } from 'react';
+"use client";
 
-type Message = { role: 'user' | 'assistant'; content: string };
+import React, { KeyboardEvent, useEffect, useRef, useState } from "react";
+import { BsChatDotsFill } from "react-icons/bs";
+import "@/Components/ChatBot.css";
 
-export default function ChatBot() {
-  const [open, setOpen] = useState(false);
+interface Message {
+  sender: "You" | "Bot";
+  text: string;
+}
+
+const getBotReply = (input: string) => {
+  const msg = input.toLowerCase();
+
+  if (msg.includes("hi") || msg.includes("hello") || msg.includes("hey")) {
+    return "👋 Welcome to Hill Street Service Apartments! How may I assist you today?";
+  }
+
+  if (msg.includes("room")) {
+    return "🏨 We offer Deluxe Rooms, Executive Rooms, and Family Suites. Which one would you like to know about?";
+  }
+
+  if (msg.includes("book") || msg.includes("reservation")) {
+    return "📅 You can book your stay through our website or contact our reception for assistance.";
+  }
+
+  if (msg.includes("price") || msg.includes("cost") || msg.includes("rate")) {
+    return "💰 Room prices depend on the room type and availability. Please visit the Booking section for the latest rates.";
+  }
+
+  if (msg.includes("check in") || msg.includes("check-in")) {
+    return "🕑 Check-in time is from 2:00 PM onwards.";
+  }
+
+  if (msg.includes("check out") || msg.includes("check-out")) {
+    return "🕛 Check-out time is before 12:00 PM.";
+  }
+
+  if (msg.includes("facility") || msg.includes("wifi") || msg.includes("parking") || msg.includes("amenities")) {
+    return "✨ We provide Free Wi-Fi, Air Conditioning, Smart TV, Housekeeping, Parking, Laundry Service, and 24/7 Reception.";
+  }
+
+  if (msg.includes("location") || msg.includes("address")) {
+    return "📍 We are located in Banjara Hills, Hyderabad, close to shopping malls, hospitals, and major business centers.";
+  }
+
+  if (msg.includes("contact") || msg.includes("phone")) {
+    return "📞 You can reach us through the Contact Us page or call our reception for assistance.";
+  }
+
+  if (msg.includes("nearby") || msg.includes("restaurant") || msg.includes("places")) {
+    return "🍽️ Our guest house is near restaurants, shopping malls, hospitals, and popular attractions in Banjara Hills.";
+  }
+
+  if (msg.includes("thank")) {
+    return "😊 You're welcome! We look forward to hosting you. Have a wonderful day!";
+  }
+
+  return "Sorry, I didn't understand. You can ask about rooms, pricing, check-in, check-out, facilities, location, or booking.";
+};
+
+const ChatBot: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Hi! Welcome to Hill Street. How can I help you today?' }
+    {
+      sender: "Bot",
+      text: "Hello! I can help with rooms, pricing, facilities, booking, check-in/out, and location.",
+    },
   ]);
-  const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages]);
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isOpen]);
 
-  const send = async (text?: string) => {
-    const msg = text || input.trim();
-    if (!msg) return;
-    setInput('');
-    const newMessages: Message[] = [...messages, { role: 'user', content: msg }];
-    setMessages(newMessages);
-    setLoading(true);
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: newMessages
-        })
-      });
-      const data = await res.json();
-      const reply = data.reply || 'Please call +91 99859 69666 for help.';
-      setMessages([...newMessages, { role: 'assistant', content: reply }]);
-    } catch {
-      setMessages([...newMessages, { role: 'assistant', content: 'Sorry! Please call +91 99859 69666.' }]);
-    }
-    setLoading(false);
+  const addMessage = (sender: "You" | "Bot", text: string) => {
+    setMessages((prev) => [...prev, { sender, text }]);
   };
 
-  const quickQuestions = ['Room availability', 'Pricing', 'Amenities', 'Location', 'How to book'];
+  const handleInput = async () => {
+    const userText = input.trim();
+    if (!userText) return;
+
+    addMessage("You", userText);
+    setInput("");
+
+    const fallbackReply = getBotReply(userText);
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: [{ role: "user", content: userText }],
+        }),
+      });
+
+      if (!response.ok) throw new Error("Chat API failed");
+
+      const data = await response.json();
+      addMessage("Bot", data.reply || fallbackReply);
+    } catch {
+      addMessage("Bot", fallbackReply);
+    }
+  };
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      void handleInput();
+    }
+  };
 
   return (
     <>
-      <button onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-800 text-white flex items-center justify-center shadow-lg z-50 text-2xl">
-        {open ? '✕' : '💬'}
+      <button
+        className="chat-toggle"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label={isOpen ? "Close chat" : "Open chat"}
+      >
+        <BsChatDotsFill size={26} />
       </button>
 
-      {open && (
-        <div className="fixed bottom-24 right-6 w-80 h-125 bg-white rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-100">
-          <div className="bg-green-900 text-white p-4 rounded-t-2xl flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">🏡</div>
-            <div>
-              <p className="font-medium text-sm">Hill Street Assistant</p>
-              <p className="text-xs opacity-80">● Online now</p>
-            </div>
-          </div>
-
-          <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-gray-50">
-            {messages.map((m, i) => (
-              <div key={i} className={`flex gap-2 ${m.role === 'user' ? 'justify-end' : ''}`}>
-                {m.role === 'assistant' && <span className="text-lg mt-auto">🏡</span>}
-                <div className={`px-3 py-2 rounded-2xl text-sm max-w-[80%] ${
-                  m.role === 'user' ? 'bg-green-800 text-white' : 'bg-white border border-gray-100'}`}>
-                  {m.content}
-                </div>
-              </div>
-            ))}
-            {loading && (
-              <div className="flex gap-2">
-                <span className="text-lg">🏡</span>
-                <div className="bg-white border border-gray-100 px-3 py-2 rounded-2xl">
-                  <span className="animate-pulse text-sm text-gray-400">Typing...</span>
-                </div>
-              </div>
-            )}
-            {messages.length === 1 && (
-              <div className="flex flex-wrap gap-2 mt-2">
-                {quickQuestions.map(q => (
-                  <button key={q} onClick={() => send(q)}
-                    className="text-xs px-3 py-1.5 rounded-full border border-green-800 text-green-800 bg-white hover:bg-green-50">
-                    {q}
-                  </button>
-                ))}
-              </div>
-            )}
-            <div ref={bottomRef} />
-          </div>
-
-          <div className="p-3 border-t flex gap-2 bg-white rounded-b-2xl">
-            <input value={input} onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && send()}
-              placeholder="Ask anything..."
-              className="flex-1 border border-gray-200 rounded-full px-4 py-2 text-sm outline-none focus:border-green-800" />
-            <button onClick={() => send()}
-              className="w-9 h-9 bg-green-800 rounded-full flex items-center justify-center text-white text-sm">
-              ➤
+      {isOpen && (
+        <div id="chatbot" className="chatbot">
+          <div className="chat-header">
+            <strong>Hill Street Assistant</strong>
+            <button className="chat-close" onClick={() => setIsOpen(false)} aria-label="Close chat">
+              ×
             </button>
           </div>
-          <p className="text-center text-xs text-gray-400 py-1 bg-white rounded-b-2xl">Sania Sultana</p>
+
+          <div className="chat-messages">
+            {messages.map((msg, index) => (
+              <div key={`${msg.sender}-${index}`} className={`chat-message ${msg.sender === "You" ? "user" : "bot"}`}>
+                <span>{msg.text}</span>
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+
+          <div className="chat-input-area">
+            <input
+              type="text"
+              placeholder="Ask about rooms, booking..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyPress}
+            />
+
+            <button onClick={() => void handleInput()}>Send</button>
+          </div>
         </div>
       )}
     </>
   );
-}
+};
+
+export default ChatBot;

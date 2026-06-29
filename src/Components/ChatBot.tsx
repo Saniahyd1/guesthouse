@@ -19,6 +19,15 @@ const getBotReply = (input: string) => {
   if (msg.includes("room")) {
     return "🏨 We offer Deluxe Rooms, Executive Rooms, and Family Suites. Which one would you like to know about?";
   }
+  if (msg.includes("book") || msg.includes("reservation")) {
+    return "📅 You can book your stay through our website or contact our reception for assistance.";
+  }
+  if (msg.includes("price") || msg.includes("cost") || msg.includes("rate")) {
+    return "💰 Room prices depend on the room type and availability. Please visit the Booking section for the latest rates.";
+  }
+  if (msg.includes("deluxe") || msg.includes("executive") || msg.includes("family suites")) {
+      return "💰 Room prices depend on the room type and availability. Deluxe rooms start at Rs.1900 per night, Executive rooms at Rs.1700, and Family Suites at Rs.1600.";
+    }
 
   if (msg.includes("book") || msg.includes("reservation")) {
     return "📅 You can book your stay through our website or contact our reception for assistance.";

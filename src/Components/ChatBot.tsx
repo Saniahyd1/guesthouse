@@ -64,6 +64,18 @@ const getBotReply = (input: string) => {
   if (msg.includes("thank")) {
     return "😊 You're welcome! We look forward to hosting you. Have a wonderful day!";
   }
+  if (msg.includes("bye") || msg.includes("goodbye")) {
+    return "👋 Goodbye! We hope to see you soon at Hill Street Service Apartments.";
+  }
+  if (msg.includes("help") || msg.includes("assist") || msg.includes("information")) {
+    return "🛎️ I'm here to assist you with information about rooms, pricing, check-in/out, facilities, location, and booking. How can I help you today?";
+  }
+  if (msg.includes("gallery") || msg.includes("photos") || msg.includes("images")) {
+    return "🖼️ You can explore our gallery to see the rooms and facilities we offer. Please visit the Gallery section on our website.";
+  }
+  if (msg.includes("services") || msg.includes("amenities") || msg.includes("facilities")) {
+    return "✨ We provide a range of services including Free Wi-Fi, Air Conditioning, Smart TV, Housekeeping,  Laundry Service, and 24/7 Reception.";
+  }
 
   return "Sorry, I didn't understand. You can ask about rooms, pricing, check-in, check-out, facilities, location, or booking.";
 };

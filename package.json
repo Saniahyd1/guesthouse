@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --hostname 192.168.29.201",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start --hostname 192.168.29.201",
+    "start": "next start",
     "postinstall": "prisma generate",
     "lint": "eslint"
   },
